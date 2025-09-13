@@ -15,7 +15,7 @@ An interactive 3D portfolio built using **Three.js** and **Blender**, showcasing
 * **Interactive 3D Room:** Explore a digital room in 3D using mouse or touch controls.
 * **Blender-Created Models:** All objects in the scene (computer, chair, decor, etc.) were modeled in **Blender** and exported to GLTF/GLB.
 * **Clickable Objects:** Click objects like the computer, chair, or items to trigger animations or open links.
-* **Portfolio Popup:** Click the computer to open a detailed popup showcasing:
+* **Portfolio Popup:** Click Portfolio to open a detailed popup showcasing:
 
   * About Me
   * Skills
