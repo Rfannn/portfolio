@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Sono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Erfan's room!</title>
+</head>
+<body>
+    <!--Three.js canvas-->
+    <div class="portfolio">
+        <canvas id="portfolio-canvas"></canvas>
+    </div>
+
+    <!--Loading screen-->
+    <div id="loading" class="loading">
+        <h2>Loading...</h2>
+        <p>Please be patient: this entire webpage is powered by a hamster on a wheel, he's trying his best!</p>
+    </div>
+
+    <!--Welcome message-->
+    <div id="welcome" class="welcome">
+        <div class="welcome-content">
+            <button id="welcome-exit-button" class="popup-close">&times;</button>
+            <div class="popup-body">
+                    <h2>Hello there,</h2>
+                    <p>Welcome to Erfan's digital office! Stay for as long as you'd like :)</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Portfolio Popup-->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <button id="popup-exit-button" class="popup-close">&times;</button>
+            <div class="popup-body">
+                <!-- About Me Section -->
+                <section class="portfolio-section" id="about-me">
+                    <h2>About Me</h2>
+                    <div class="about-me-content">
+                        <div class="personal-info">
+                            <p><strong>Name:</strong> Erfan</p>
+                            <p><strong>Age:</strong> 18</p>
+                            <p><strong>Location:</strong> Iran, Birjand</p>
+                            <p><strong>Languages Spoken:</strong> Persian, English</p>
+                            <p><strong>Occupation:</strong> Self-Employed Web Developer</p>
+                            <p>I'm an 18 year old developer. I really enjoy Web Development, AI Systems and Machine Learning. I really hope that, one day, I can make a significant impact in one of these industries.</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Skills Section -->
+                <section class="portfolio-section" id="skills">
+                    <h2>Technical Skills</h2>
+                    <div class="skills-content">
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>C#</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>APIs, frameworks and databases</h3>
+                            <ul>
+                                <li>Django</li>
+                                <li>Flask</li>
+                                <li>React</li>
+                                <li>Three.js</li>
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>SQLite</li>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Software and tools</h3>
+                            <ul>
+                                <li>Git/Github</li>
+                                <li>Linux</li>
+                                <li>Unreal Engine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Work Experience Section -->
+                <section class="portfolio-section" id="work-experience">
+                    <h2>Work Experience</h2>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <h3>Self-employed Web Developer</h3>
+                            <p><strong></strong>Aug 2021 - Present</p>
+                            <ul>
+                                <li>Worked on multiple web applications with different tech stacks and different sizes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Education Section -->
+                <section class="portfolio-section" id="education">
+                    <h2>Education</h2>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <h3>Diploma in math and physics</h3>
+                            <p><strong>Taleghani Highschool - Birjand, South Khorasan</strong> | 2022 - 2025</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Projects Section -->
+                <section class="portfolio-section" id="projects">
+                    <h2>Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./public/Thumbnail_Notely.png" alt="Project 1">
+                            </div>
+                            <div class="project-details">
+                                <h3>Notely</h3>
+                                <p>Full-stack Note-taking web application built with Django
+and React + Vite. This project demonstrates modern web
+app architecture and RESTful API integration.</p>
+                                <div class="project-links">
+                                    <a href="https://notely-umber.vercel.app/" target="_blank">View Project</a>
+                                    <a href="https://github.com/Rfannn/Notely" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./public/Thumbnail_Portfolio.png" alt="Project 1">
+                            </div>
+                            <div class="project-details">
+                                <h3>Interactive 3D Portfolio</h3>
+                                <p>A 3D web portfolio built using Three.js and Blender.</p>
+                                <div class="project-links">
+                                    <a href="https://rfannn.github.io/portfolio/" target="_blank">View Project</a>
+                                    <a href="https://github.com/rfannn/portfolio" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <!--
+                                <img src="./public/Thumbnail_A.png" alt="Project 2"> 
+                                -->
+                            </div>
+                            <div class="project-details">
+                                <h3>AuraVision</h3>
+                                <p>AuraVision is a real-time speech-to-text demo tool designed to help the deaf and hard-of-hearing community by converting spoken words into text. This demo runs on Windows, Linux, and Mac PCs and supports English, Spanish, and Farsi.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Rfannn/AuraVision" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Contact Section -->
+                <section class="portfolio-section" id="contact">
+                    <h2>Contact Me</h2>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <strong>Telegram:</strong> 
+                            <a href="https://t.me/gns_rfan" target="_blank">@GNS_Rfan</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Number:</strong> 
+                            (98) 912 345 6789
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong> 
+                            erfannasehitabar.bis@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong> 
+                            tsmrfangg@gmail.com   
+                        </div>
+                        <div class="contact-item">
+                            <strong>GitHub:</strong> 
+                            <a href="https://github.com/rfannn" target="_blank">Rfannn</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Linkedin:</strong> 
+                            <a href="https://www.linkedin.com/in/erfan-nasehi-tabar-b35ab1325/" target="_blank">Erfan Nasehi Tabar</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!--Import Three.js-->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <!--Main Script-->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
