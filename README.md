@@ -19,6 +19,7 @@ An interactive 3D portfolio built using **Three.js** and **Blender**, showcasing
 
   * About Me
   * Skills
+  * Work Experience
   * Education
   * Projects
   * Contact Information
