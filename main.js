@@ -71,7 +71,7 @@ loader.load(
     },
     undefined,
     function(error){
-        console.error();
+        console.error('Failed to load 3D model:', error);
     }
 );
 
@@ -200,7 +200,7 @@ function onClick(event){
         } else if (name === "Github") {
             window.open('https://github.com/rfannn', '_blank');
         } else if (name === "TwitterX") {
-            window.open('', '_blank');
+            window.open('https://twitter.com', '_blank');
         } else if (name === "Chair") {
             spinObject(obj);
         } else {
