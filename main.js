@@ -6,6 +6,7 @@ const popup = document.getElementById('popup');
 const closePopupButton = document.getElementById('popup-exit-button');
 
 const loading = document.getElementById('loading');
+const loadingText = loading ? loading.querySelector('h2') : null;
 
 const welcome = document.getElementById('welcome');
 const closeWelcomeButton = document.getElementById('welcome-exit-button');
@@ -67,11 +68,19 @@ loader.load(
         });
         scene.add(glb.scene);
         setupLights();
-        loading.classList.toggle('hidden');
+        loading.classList.add('hidden');
     },
-    undefined,
+    function(xhr){
+        if(loadingText){
+            const percent = Math.round((xhr.loaded / xhr.total) * 100);
+            loadingText.textContent = `Loading... ${percent}%`;
+        }
+    },
     function(error){
-        console.error();
+        console.error('Failed to load 3D model:', error);
+        if(loadingText){
+            loadingText.textContent = 'Failed to load. Please refresh.';
+        }
     }
 );
 
@@ -126,6 +135,7 @@ if(sizes.width < 800){
     camera.position.y = 8;    
     camera.position.z = 15;  
     controls.maxDistance = 30;
+    controls.minDistance = 5;
 }
 
 controls.target.set(-1, 3, -1.5); 
@@ -200,7 +210,7 @@ function onClick(event){
         } else if (name === "Github") {
             window.open('https://github.com/rfannn', '_blank');
         } else if (name === "TwitterX") {
-            window.open('', '_blank');
+            window.open('https://twitter.com', '_blank');
         } else if (name === "Chair") {
             spinObject(obj);
         } else {
