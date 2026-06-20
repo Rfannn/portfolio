@@ -244,9 +244,29 @@ body {
     display: none !important;
 }
 
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
+    :root {
+        --font-size-base: 16px;
+    }
+
     body {
         font-size: 16px; 
+    }
+
+    /* Mobile-friendly popups */
+    .welcome-content,
+    .popup-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .popup-close {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
     }
 
     /* Skills Section */
@@ -257,27 +277,39 @@ body {
     /* Projects Section */
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-links a {
+        text-align: center;
     }
 
     /* Contact Section */
     .contact-links {
         grid-template-columns: 1fr;
     }
+}
 
-    /* Ensure consistent project card sizing */
-    .project-card {
-        display: flex;
-        flex-direction: column;
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .popup-body {
+        padding: 15px;
+    }
+
+    .portfolio-section {
+        padding: 10px;
     }
 
     .project-image {
-        height: 250px; /* Slightly larger for mobile */
+        height: 150px;
     }
-}
-
-/* Ensure images are responsive */
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }

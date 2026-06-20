@@ -71,7 +71,7 @@ loader.load(
     },
     undefined,
     function(error){
-        console.error();
+        console.error('Failed to load 3D model:', error);
     }
 );
 
@@ -110,9 +110,9 @@ const controls = new OrbitControls(camera, canvas);
 controls.enablePan = false;
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
-controls.minPolarAngle = Math.PI / 4; 
+controls.minPolarAngle = Math.PI / 8; 
 controls.maxPolarAngle = Math.PI / 2;
-controls.minAzimuthAngle = 0;
+controls.minAzimuthAngle = -Math.PI / 4;
 controls.maxAzimuthAngle = Math.PI / 2;
 controls.minDistance = 10; 
 controls.maxDistance = 30;
@@ -126,6 +126,7 @@ if(sizes.width < 800){
     camera.position.y = 8;    
     camera.position.z = 15;  
     controls.maxDistance = 30;
+    controls.minDistance = 5;
 }
 
 controls.target.set(-1, 3, -1.5); 
@@ -200,7 +201,7 @@ function onClick(event){
         } else if (name === "Github") {
             window.open('https://github.com/rfannn', '_blank');
         } else if (name === "TwitterX") {
-            window.open('', '_blank');
+            window.open('https://twitter.com', '_blank');
         } else if (name === "Chair") {
             spinObject(obj);
         } else {
